@@ -1,0 +1,130 @@
+.request-form {
+    position: relative;
+
+    &__group {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        margin-bottom: 40px;
+
+        @include vp-1023 {
+            gap: 4px;
+            margin-bottom: 30px;
+        }
+    }
+
+    &__top {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+
+        @include vp-1023 {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 36px;
+        text-align: center;
+        margin: 0 0 60px;
+
+        @include vp-1023 {
+            font-size: 26px;
+            line-height: 32px;
+            margin-bottom: 30px;
+        }
+
+        @include vp-767 {
+            font-size: 20px;
+            line-height: 20px;
+            margin: 0 auto 20px;
+            width: 180px;
+        }
+    }
+
+    &__suitcase-icon {
+        position: absolute;
+        bottom: 20px;
+        left: 60px;
+        width: 72px;
+        height: 134px;
+
+        @include vp-1023 {
+            display: none;
+        }
+
+        &--tablet {
+            bottom: 7px;
+            left: -100px;
+            width: 80px;
+            height: 149px;
+            display: none;
+
+            @include vp-1023 {
+                display: block;
+            }
+
+            @include vp-767 {
+                display: none;
+            }
+        }
+    }
+
+    &__airplane-icon {
+        position: absolute;
+        bottom: -20px;
+        right: 90px;
+        width: 236px;
+        height: 74px;
+
+        @include vp-1023 {
+            display: none;
+        }
+
+        &--tablet {
+            bottom: -103px;
+            right: -80px;
+            width: 340px;
+            height: 83px;
+            display: none;
+
+            @include vp-1023 {
+                display: block;
+            }
+
+            @include vp-767 {
+                display: none;
+            }
+        }
+    }
+
+    &__btn {
+        margin: 0 auto 10px;
+        width: 300px;
+
+        @include vp-1023 {
+            margin-bottom: 5px;
+        }
+
+        @include vp-767 {
+            width: 100%;
+        }
+    }
+
+    &__agreement {
+        font-size: 12px;
+        line-height: 16px;
+        text-align: center;
+        color: $color-grey-suit;
+        margin: 0;
+
+        @include vp-767 {
+            font-size: 10px;
+            line-height: 12px;
+        }
+    }
+}

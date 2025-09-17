@@ -1,0 +1,40 @@
+.tours {
+  margin: 0 0 60px;
+
+  @include vp-767 {
+    margin-bottom: 40px;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+    @include vp-1023 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include vp-767 {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 15px;
+    }
+  }
+
+  &__item--flat {
+    grid-column: span 2;
+
+    @include vp-767 {
+      grid-column: span 1;
+    }
+  }
+
+  &__item--flat-small {
+    @include vp-1023 {
+      grid-column: span 1;
+    }
+  }
+}

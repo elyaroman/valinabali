@@ -1,0 +1,85 @@
+.custom-textarea {
+    position: relative;
+    padding-top: 23px;
+    width: 100%;
+    height: 183px;
+
+    @include vp-1023 {
+        height: 163px;
+    }
+
+    @include vp-767 {
+        height: 141px;
+    }
+
+    &--error {
+        .custom-input__field {
+            border-color: $color-error;
+        }
+    }
+
+    &__field {
+        border-radius: 8px;
+        border: 1px solid $color-hawkes-blue;
+        font-size: 15px;
+        line-height: 20px;
+        color: $color-nero;
+        padding: 15px;
+        width: 100%;
+        min-height: 160px;
+
+        @include vp-1023 {
+            min-height: 140px;
+        }
+
+        @include vp-767 {
+            min-height: 120px;
+        }
+
+        &:not(:disabled):hover,
+        &:not(:disabled):focus-visible {
+            outline: none;
+            border-color: $color-deep-lilac;
+        }
+
+        &::placeholder {
+            color: $color-grey-suit;
+            opacity: 1;
+        }
+
+        &[disabled] {
+            background-color: $color-ghost-white;
+        }
+    }
+
+    &__label {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 18px;
+        color: $color-grey-suit;
+        user-select: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        @include vp-767 {
+            font-size: 12px;
+            line-height: 16px;
+        }
+    }
+
+    &__error {
+        font-size: 12px;
+        line-height: 16px;
+        color: $color-error;
+        display: flex;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.3s ease;
+    }
+
+    &--error &__error {
+        opacity: 1;
+        visibility: visible;
+    }
+}
